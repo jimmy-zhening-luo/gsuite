@@ -37,7 +37,7 @@ export function loadSetting() {
       mail.length < SETTING.mail.length
       || calendar.length < SETTING.calendar.length
     )
-      throw new ReferenceError("Missing settings");
+      throw ReferenceError("Missing settings");
 
     return {
       mail: Object.fromEntries(mail) as Record<typeof mail[number][0], string>,
@@ -45,6 +45,6 @@ export function loadSetting() {
     };
   }
   catch (e) {
-    throw new Error("Failed to load settings", { cause: e });
+    throw Error("Failed to load settings", { cause: e });
   }
 }

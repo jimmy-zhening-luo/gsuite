@@ -1,7 +1,7 @@
 export function getThreads(label = "") {
   try {
     if (label === "")
-      throw new ReferenceError(
+      throw ReferenceError(
         "No email label provided",
         { cause: { label } },
       );
@@ -11,7 +11,7 @@ export function getThreads(label = "") {
       .getThreads();
   }
   catch (e) {
-    throw new Error(
+    throw Error(
       "Failed to get email threads for label: "
         .concat(label),
       { cause: e },
