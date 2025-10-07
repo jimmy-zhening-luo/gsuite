@@ -31,10 +31,10 @@
     "@babel/preset-typescript": "^7.27.1",
     "@google/clasp": "3.0.6-alpha",
     "@rollup/plugin-babel": "^6.0.4",
-    "@rollup/plugin-node-resolve": "^16.0.1",
-    "@types/google-apps-script": "^2.0.4",
-    "linted": "~31.2.11",
-    "rollup": "^4.52.3",
+    "@rollup/plugin-node-resolve": "^16.0.2",
+    "@types/google-apps-script": "^2.0.5",
+    "linted": "32.0.1",
+    "rollup": "^4.52.4",
     "typescript": "^5.9.3"
   },
   "scripts": {
