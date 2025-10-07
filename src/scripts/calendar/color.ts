@@ -17,7 +17,7 @@ export function setEventColor(
   console.log("setEventColor: Begin setting event color");
   setColor(matchEvent(events, eventBuffer), "Graphite");
   setColor(matchEvent(events, eventTherapy), "Peacock");
-  setColor(matchEvent(events, eventDoctor), "Banana");
-  setColor(matchEvent(events, eventHaircut), "Banana");
+  setColor(matchEvent(events, eventDoctor), "Peacock");
+  setColor(matchEvent(events, eventHaircut), "Flamingo");
   console.log(`setEventColor: Successfully set all event colors`);
 }
