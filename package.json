@@ -30,10 +30,10 @@
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-typescript": "^7.27.1",
     "@google/clasp": "3.0.6-alpha",
-    "@rollup/plugin-babel": "^6.0.4",
-    "@rollup/plugin-node-resolve": "^16.0.2",
+    "@rollup/plugin-babel": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
     "@types/google-apps-script": "^2.0.5",
-    "linted": "^32.0.2",
+    "linted": "^32.1.1",
     "rollup": "^4.52.4",
     "typescript": "^5.9.3"
   },
