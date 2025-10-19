@@ -9,7 +9,7 @@ export default linted({
   },
   ts: {
     rules: {
-      "@typescript-eslint/no-unused-vars": 0,
+      "ts/no-unused-vars": 0,
     },
   },
 });
