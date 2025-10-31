@@ -1,5 +1,5 @@
 {
-  "$pkg": "2211.7.0",
+  "$pkg": "2411.0.0",
   "$schema": "https://json.schemastore.org/package",
   "$help": "https://docs.npmjs.com/cli/configuring-npm/package-json",
   "name": "gsuite",
@@ -20,8 +20,8 @@
   "private": true,
   "engineStrict": true,
   "engines": {
-    "node": "^22",
-    "npm": "^10 || ^11"
+    "node": "^24",
+    "npm": "^11"
   },
   "type": "module",
   "devDependencies": {
@@ -33,7 +33,7 @@
     "@rollup/plugin-babel": "^6.1.0",
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@types/google-apps-script": "^2.0.7",
-    "linted": "33.3.5",
+    "linted": "33.4.0",
     "rollup": "^4.52.5",
     "typescript": "^5.9.3"
   },
