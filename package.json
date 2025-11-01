@@ -1,5 +1,5 @@
 {
-  "$pkg": "2411.4.1",
+  "$pkg": "2411.4.2",
   "$schema": "https://json.schemastore.org/package",
   "$help": "https://docs.npmjs.com/cli/configuring-npm/package-json",
   "name": "gsuite",
