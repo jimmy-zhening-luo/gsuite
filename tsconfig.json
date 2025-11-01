@@ -7,8 +7,6 @@
   ],
   "compilerOptions": {
     "noUnusedLocals": false /* @OVERRIDE */,
-    // "module": "esnext",
-    // "moduleResolution": "bundler",
     "types": [
       /* @OVERRIDE */
       /* {CONFIGURE} */
@@ -22,7 +20,6 @@
       "esnext",
       /* {CONFIGURE} */
     ],
-    // "target": "esnext",
     "composite": false /* @OVERRIDE */,
     // "skipLibCheck": true,
   },
