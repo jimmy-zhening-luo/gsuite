@@ -1,6 +1,5 @@
 {
   "$schema": "https://json.schemastore.org/babelrc",
-  "$help": "https://babeljs.io/docs/options",
   "presets": [
     [
       "@babel/preset-env",
