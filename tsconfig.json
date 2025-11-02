@@ -3,24 +3,10 @@
   "extends": "./tsconfig-base.json",
   "include": [
     "src/**/*",
-    "typings/**/*",
   ],
   "compilerOptions": {
-    "noUnusedLocals": false /* @OVERRIDE */,
-    "types": [
-      /* @OVERRIDE */
-      /* {CONFIGURE} */
-      "google-apps-script" /* @OVERRIDE */,
-    ],
-    "declaration": true /* @OVERRIDE */,
-    "noEmit": true /* @OVERRIDE */,
-    // "sourceMap": false,
-    "verbatimModuleSyntax": true /* @OVERRIDE */,
-    "lib": [
-      "esnext",
-      /* {CONFIGURE} */
-    ],
-    "composite": false /* @OVERRIDE */,
-    // "skipLibCheck": true,
+    "noUnusedLocals": false,
+    "noEmit": true,
+    "verbatimModuleSyntax": true,
   },
 }
