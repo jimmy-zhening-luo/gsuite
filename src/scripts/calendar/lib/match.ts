@@ -1,21 +1,24 @@
+interface UniqueEvent {
+  uuid: string;
+  title: string;
+  event: GoogleAppsScript.Calendar.CalendarEvent;
+}
+
 export function matchEvent(
-  events: CalendarEventHandle[],
+  events: UniqueEvent[],
   terms: string[],
 ) {
-  return [
-    ...new Map(
+  return Array.from(
+    new Map(
       terms
         .map(term => term.toLocaleLowerCase())
-        .map(
+        .flatMap(
           term => events.filter(
-            ([, handle]) => handle
-              .title
-              .includes(term),
+            ({ title }) => title.includes(term),
           ),
         )
-        .flat(),
+        .map(({ uuid, event }) => [uuid, event] as const),
     )
       .values(),
-  ]
-    .map(detail => detail.event);
+  );
 }

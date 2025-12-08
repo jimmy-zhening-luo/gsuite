@@ -1,12 +1,24 @@
-import { EVENT_COLORS } from "./colors";
-
-export function setColor(
+export function color(
   events: GoogleAppsScript.Calendar.CalendarEvent[],
-  color: keyof typeof EVENT_COLORS,
+  color: EventColorFriendly,
 ) {
-  const code = String(CalendarApp.EventColor[EVENT_COLORS[color]]);
+  const code = String(color);
 
   for (const event of events)
     if (event.getColor() !== code)
       event.setColor(code);
+}
+
+export enum EventColorFriendly {
+  Lavender = 1,
+  Sage,
+  Grape,
+  Flamingo,
+  Banana,
+  Tangerine,
+  Peacock,
+  Graphite,
+  Blueberry,
+  Basil,
+  Tomato,
 }

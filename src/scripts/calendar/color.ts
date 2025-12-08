@@ -1,23 +1,24 @@
 import {
-  getUpcomingEvent,
+  upcomingEvents,
   matchEvent,
-  setColor,
+  color,
+  EventColorFriendly,
 } from "./lib";
 
-export function setEventColor(
+export function taskCalendarEventColor(
   eventBuffer: string[],
   eventTherapy: string[],
   eventDoctor: string[],
   eventHaircut: string[],
 ) {
-  const events = getUpcomingEvent(
+  const events = upcomingEvents(
     CalendarApp.getDefaultCalendar(),
   );
 
   console.log("setEventColor: Begin setting event color");
-  setColor(matchEvent(events, eventBuffer), "Graphite");
-  setColor(matchEvent(events, eventTherapy), "Peacock");
-  setColor(matchEvent(events, eventDoctor), "Peacock");
-  setColor(matchEvent(events, eventHaircut), "Flamingo");
+  color(matchEvent(events, eventBuffer), EventColorFriendly.Graphite);
+  color(matchEvent(events, eventTherapy), EventColorFriendly.Peacock);
+  color(matchEvent(events, eventDoctor), EventColorFriendly.Peacock);
+  color(matchEvent(events, eventHaircut), EventColorFriendly.Flamingo);
   console.log(`setEventColor: Successfully set all event colors`);
 }

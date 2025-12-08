@@ -1,7 +1,7 @@
-import { getThreads } from "./lib/thread";
+import { getLabelThreads } from "./lib/thread";
 
-export function cleanGarbage(garbageTag: string) {
-  const garbage = getThreads(garbageTag);
+export function taskMailClean(garbageTag: string) {
+  const garbage = getLabelThreads(garbageTag);
 
   console.log(`cleanGarbage: Found ${garbage.length} threads tagged with: ${garbageTag}`);
 

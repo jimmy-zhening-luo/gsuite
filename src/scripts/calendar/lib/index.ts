@@ -1,6 +1,9 @@
-export { setColor } from "./color";
+export {
+  color,
+  EventColorFriendly,
+} from "./color";
 export { matchEvent } from "./match";
 export {
-  getUpcomingEvent,
+  upcomingEvents,
   uuid,
-} from "./upcoming";
+} from "./events";

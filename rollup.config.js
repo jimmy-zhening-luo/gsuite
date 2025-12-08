@@ -2,17 +2,22 @@ import { nodeResolve } from "@rollup/plugin-node-resolve";
 import { babel } from "@rollup/plugin-babel";
 
 const extensions = [".ts"],
-noShake = () => ({
-  name: "no-treeshake",
-  resolveId(id, importer) {
-    return !importer
-      ? {
-          id,
-          moduleSideEffects: "no-treeshake",
-        }
-      : null;
-  },
-});
+noTreeshake = "no-treeshake";
+
+/** @returns {import('rollup').Plugin} */
+function noShake() {
+  return {
+    name: noTreeshake,
+    resolveId(id, importer) {
+      return importer
+        ? null
+        : {
+            id,
+            moduleSideEffects: noTreeshake,
+          };
+    },
+  };
+}
 
 /** @type {import('rollup').RollupOptions} */
 export default {
