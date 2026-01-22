@@ -34,7 +34,7 @@
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@types/google-apps-script": "^2.0.8",
     "linted": "37.6.2",
-    "rollup": "^4.55.2",
+    "rollup": "^4.56.0",
     "typescript": "^5.9.3"
   },
   "scripts": {
