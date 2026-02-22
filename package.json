@@ -1,5 +1,5 @@
 {
-  "$pkg": "2412.0.0",
+  "$pkg": "2413.0.0",
   "$schema": "https://json.schemastore.org/package",
   "$help": "https://docs.npmjs.com/cli/configuring-npm/package-json",
   "name": "gsuite",
@@ -38,14 +38,13 @@
     "typescript": "^5.9.3"
   },
   "scripts": {
-    "clean": "cmd --% /c \"for %G in (types dist build packed .svelte-kit) do (if exist %G rmdir /s /q %G) & for %G in (.eslintcache) do (if exist %G del /f /q %G)\" || rm -rf types dist build packed .svelte-kit .eslintcache",
+    "clean": "cmd /q /c \"for %G in (types dist build packed .svelte-kit) do (if exist %G rmdir /s /q %G) & for %G in (.eslintcache) do (if exist %G del /f /q %G)\" || rm -rf types dist build packed .svelte-kit .eslintcache",
     "build": "rollup --config",
-    "postbuild": "npm run lint || exit 0",
     "lint": "eslint --cache --fix",
     "pretest": "npm run build",
-    "test": "npm run --if-present test:suite",
+    "test": "",
+    "posttest": "npm run lint || exit 0",
     "predeploy": "npm run clean && npm test",
-    "stage": "",
     "deploy": "clasp status && clasp push -f && npm run deploy:success",
     "deploy:success": "echo \"Deployed to: https://script.google.com/d/1qFMqBXZquMU9CrUnqjp-TRRtAxtDn24zFiqKID3f7pNzKGD23m38bbze/edit\""
   },
