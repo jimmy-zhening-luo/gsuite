@@ -1,8 +1,10 @@
 export function uuid(event: GoogleAppsScript.Calendar.CalendarEvent) {
   return event.getId() + "#" + (
     event.isAllDayEvent()
-      ? "ALL_DAY:" + String(event.getAllDayStartDate().getTime())
-      : String(event.getStartTime().getTime())
+      ? "ALL_DAY:" + String(event.getAllDayStartDate()
+        .getTime())
+      : String(event.getStartTime()
+          .getTime())
   );
 }
 
