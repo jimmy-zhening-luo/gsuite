@@ -22,8 +22,11 @@ export function Setting() {
     );
   }
 
-  function getSettings<Records>(records: Records): Records extends readonly [infer K, infer V][] ? K extends string ? Record<K, V> : never : never {
-    return Object.fromEntries(records);
+  function getSettings<
+    K extends string,
+    V,
+  >(records: readonly (readonly [K, V])[]): Record<K, V> {
+    return Object.fromEntries(records) as Record<K, V>;
   }
 
   return {
