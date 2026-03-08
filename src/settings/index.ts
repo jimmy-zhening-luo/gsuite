@@ -13,6 +13,10 @@ export function Setting() {
     if (!(setting in store))
       throw ReferenceError(`Missing setting: ${setting}`);
 
+  for (const setting of Calendar)
+    if (!(setting in store))
+      throw ReferenceError(`Missing setting: ${setting}`);
+
   function getSettingRecords<K extends string>(keys: readonly K[]): ([K, string])[] {
     return keys.map(
       key => [
