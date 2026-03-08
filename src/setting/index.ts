@@ -2,35 +2,42 @@ import { SETTINGS } from "./settings";
 
 export function Setting() {
   const {
-    mail,
-    calendar,
+    Mail,
+    Calendar,
   } = SETTINGS,
   store = PropertiesService
     .getScriptProperties()
-    .getProperties(),
-  deindex = <K extends string>(keys: readonly K[]): ([K, string])[] => keys
-    .filter(key => key in store)
-    .map(key => [key, store[key]!]),
-  mailSetting = deindex(mail),
-  calendarSetting = deindex(calendar)
-    .map(
-      ([category, terms]) => [
-        category,
-        terms
-          .split(";")
-          .map(term => term.trim())
-          .filter(term => term),
-      ] as const,
-    );
+    .getProperties();
 
-  if (
-    mailSetting.length < mail.length
-    || calendarSetting.length < calendar.length
-  )
-    throw ReferenceError("Missing settings");
+  for (const setting in Mail)
+    if (!(setting in store))
+      throw ReferenceError(`Missing setting: ${setting}`);
+
+  function getSettingRecords<K extends string>(keys: readonly K[]): ([K, string])[] {
+    return keys.map(
+      key => [
+        key,
+        store[key]!,
+      ],
+    );
+  }
+
+  function getSettings<Records>(records: Records): Records extends readonly [infer K, infer V][] ? K extends string ? Record<K, V> : never : never {
+    return Object.fromEntries(records);
+  }
 
   return {
-    mail: Object.fromEntries(mailSetting) as Record<typeof mailSetting[number][0], string>,
-    calendar: Object.fromEntries(calendarSetting) as Record<typeof calendarSetting[number][0], string[]>,
+    mail: Object.fromEntries(getSettingRecords(Mail)) as Record<typeof mailSetting[number][0], string>,
+    calendar: Object.fromEntries(
+      getSettingRecords(Calendar).map(
+        ([category, terms]) => [
+          category,
+          terms
+            .split(";")
+            .map(term => term.trim())
+            .filter(term => term),
+        ] as const,
+      ),
+    ) as Record<typeof calendarSetting[number][0], string[]>,
   };
 }
