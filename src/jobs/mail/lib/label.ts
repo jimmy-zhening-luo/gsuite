@@ -1,4 +1,4 @@
-export function getLabelThreads(label: string) {
+export function getLabel(label: string) {
   return GmailApp
     .getUserLabelByName(label)
     .getThreads();

@@ -1,9 +1,3 @@
-export {
-  color,
-  EventColorFriendly,
-} from "./color";
-export { matchEvent } from "./match";
-export {
-  upcomingEvents,
-  uuid,
-} from "./events";
+export * from "./events";
+export * from "./match";
+export * from "./color";

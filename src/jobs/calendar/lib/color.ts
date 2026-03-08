@@ -1,4 +1,4 @@
-export function color(
+export function setColor(
   events: GoogleAppsScript.Calendar.CalendarEvent[],
   color: EventColorFriendly,
 ) {
