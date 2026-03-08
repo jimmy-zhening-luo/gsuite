@@ -6,17 +6,22 @@ import {
 
 function script() {
   const {
-    mail,
-    calendar,
+    mail: {
+      labelGmailGarbage,
+    },
+    calendar: {
+      eventBuffer,
+      eventTherapy,
+      eventDoctor,
+      eventHaircut,
+    },
   } = Setting();
 
-  console.log("Script: Start");
-  Mail.taskMailClean(mail.labelGmailGarbage);
+  Mail.taskMailClean(labelGmailGarbage);
   Calendar.taskCalendarEventColor(
-    calendar.eventBuffer,
-    calendar.eventTherapy,
-    calendar.eventDoctor,
-    calendar.eventHaircut,
+    eventBuffer,
+    eventTherapy,
+    eventDoctor,
+    eventHaircut,
   );
-  console.log("Script: Complete");
 }
