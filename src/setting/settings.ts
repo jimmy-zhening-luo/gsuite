@@ -1,4 +1,4 @@
-export const SETTING = {
+export const SETTINGS = {
   mail: ["labelGmailGarbage"] as const,
   calendar: [
     "eventBuffer",
