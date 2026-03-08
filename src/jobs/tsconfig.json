@@ -1,6 +1,14 @@
 {
-  "extends": "../tsconfig-src",
-  "include": [
-    "**/*",
+  "files": [
+    "index.ts",
+  ],
+  "extends": "..",
+  "references": [
+    {
+      "path": "calendar",
+    },
+    {
+      "path": "mail",
+    },
   ],
 }
