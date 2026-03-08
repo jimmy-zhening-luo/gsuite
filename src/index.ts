@@ -2,7 +2,7 @@ import { Setting } from "./setting";
 import {
   Mail,
   Calendar,
-} from "./scripts";
+} from "./jobs";
 
 function run() {
   const {
@@ -17,8 +17,8 @@ function run() {
     },
   } = Setting();
 
-  Mail.taskMailClean(labelGmailGarbage);
-  Calendar.taskCalendarEventColor(
+  Mail.jobMailClean(labelGmailGarbage);
+  Calendar.jobCalendarEventColor(
     eventBuffer,
     eventTherapy,
     eventDoctor,

@@ -1,6 +1,6 @@
 import { getLabelThreads } from "./lib/thread";
 
-export function taskMailClean(garbageTag: string) {
+export function jobMailClean(garbageTag: string) {
   for (const piece of getLabelThreads(garbageTag))
     piece.moveToSpam();
 }

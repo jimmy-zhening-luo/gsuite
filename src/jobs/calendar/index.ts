@@ -1,0 +1,1 @@
+export { jobCalendarEventColor } from "./color";
