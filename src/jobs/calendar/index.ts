@@ -1,1 +1,1 @@
-export { jobCalendarEventColor } from "./color";
+export * from "./color";

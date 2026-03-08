@@ -17,8 +17,8 @@ function run() {
     },
   } = Setting();
 
-  Mail.jobMailClean(labelGmailGarbage);
-  Calendar.jobCalendarEventColor(
+  Mail.emptyGarbage(labelGmailGarbage);
+  Calendar.categorizeEvent(
     eventBuffer,
     eventTherapy,
     eventDoctor,

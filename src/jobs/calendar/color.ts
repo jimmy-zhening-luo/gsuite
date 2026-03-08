@@ -5,7 +5,7 @@ import {
   EventColorFriendly,
 } from "./lib";
 
-export function jobCalendarEventColor(
+export function categorizeEvent(
   eventBuffer: string[],
   eventTherapy: string[],
   eventDoctor: string[],

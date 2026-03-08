@@ -1,1 +1,1 @@
-export { jobMailClean } from "./clean";
+export * from "./clean";
