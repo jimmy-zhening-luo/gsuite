@@ -4,7 +4,7 @@ interface UniqueEvent {
   event: GoogleAppsScript.Calendar.CalendarEvent;
 }
 
-export function matchEvents(
+export function filterEvents(
   events: UniqueEvent[],
   terms: string[],
 ) {

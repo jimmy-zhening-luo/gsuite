@@ -1,3 +1,3 @@
 export * from "./events";
-export * from "./match";
+export * from "./filter";
 export * from "./color";

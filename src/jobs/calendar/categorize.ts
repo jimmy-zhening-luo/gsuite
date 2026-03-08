@@ -1,6 +1,6 @@
 import {
   getEvents,
-  matchEvents,
+  filterEvents,
   setEventColor,
   EventColorFriendly,
 } from "./lib";
@@ -16,19 +16,19 @@ export function categorizeEvent(
   );
 
   setEventColor(
-    matchEvents(events, eventBuffer),
+    filterEvents(events, eventBuffer),
     EventColorFriendly.Graphite,
   );
   setEventColor(
-    matchEvents(events, eventTherapy),
+    filterEvents(events, eventTherapy),
     EventColorFriendly.Peacock,
   );
   setEventColor(
-    matchEvents(events, eventDoctor),
+    filterEvents(events, eventDoctor),
     EventColorFriendly.Peacock,
   );
   setEventColor(
-    matchEvents(events, eventHaircut),
+    filterEvents(events, eventHaircut),
     EventColorFriendly.Flamingo,
   );
 }
