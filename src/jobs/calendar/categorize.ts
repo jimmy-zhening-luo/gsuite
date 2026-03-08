@@ -5,7 +5,7 @@ import {
   EventColorFriendly,
 } from "./lib";
 
-export function categorizeEvent(
+export function categorizeEvents(
   eventBuffer: string[],
   eventTherapy: string[],
   eventDoctor: string[],

@@ -18,7 +18,7 @@ function run() {
   } = Setting();
 
   Mail.emptyGarbage(labelGmailGarbage);
-  Calendar.categorizeEvent(
+  Calendar.categorizeEvents(
     eventBuffer,
     eventTherapy,
     eventDoctor,
