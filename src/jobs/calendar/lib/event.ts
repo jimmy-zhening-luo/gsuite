@@ -18,16 +18,16 @@ export function getEvents(
             + (
               event.isAllDayEvent()
                 ? "ALL_DAY:"
-                  + String(
-                    event
-                      .getAllDayStartDate()
-                      .getTime()
-                  )
-                : String(
+                + String(
                   event
-                    .getStartTime()
-                    .getTime()
+                    .getAllDayStartDate()
+                    .getTime(),
                 )
+                : String(
+                    event
+                      .getStartTime()
+                      .getTime(),
+                  )
             ),
           title: event
             .getTitle()
