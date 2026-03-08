@@ -1,0 +1,14 @@
+{
+  "extends": "../tsconfig-base",
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "../dist",
+    "composite": true,
+    "noUnusedLocals": false,
+    "types": [
+      "google-apps-script",
+    ],
+    "emitDeclarationOnly": true,
+    "verbatimModuleSyntax": true,
+  },
+}

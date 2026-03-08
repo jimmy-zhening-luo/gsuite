@@ -3,5 +3,5 @@
     "index.ts",
     "settings.ts",
   ],
-  "extends": "..",
+  "extends": "../tsconfig-src.json",
 }

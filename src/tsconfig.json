@@ -2,7 +2,7 @@
   "files": [
     "index.ts",
   ],
-  "extends": "../tsconfig-base",
+  "extends": "./tsconfig-src",
   "references": [
     {
       "path": "jobs",
@@ -11,15 +11,4 @@
       "path": "settings",
     },
   ],
-  "compilerOptions": {
-    "rootDir": ".",
-    "outDir": "../dist",
-    "composite": true,
-    "noUnusedLocals": false,
-    "types": [
-      "google-apps-script",
-    ],
-    "emitDeclarationOnly": true,
-    "verbatimModuleSyntax": true,
-  },
 }

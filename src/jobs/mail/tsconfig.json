@@ -1,8 +1,9 @@
 {
-  "extends": "..",
-  "include": [
-    "*",
+  "files": [
+    "index.ts",
+    "empty.ts",
   ],
+  "extends": "..",
   "references": [
     {
       "path": "lib",

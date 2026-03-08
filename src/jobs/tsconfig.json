@@ -2,7 +2,7 @@
   "files": [
     "index.ts",
   ],
-  "extends": "..",
+  "extends": "../tsconfig-src.json",
   "references": [
     {
       "path": "calendar",
