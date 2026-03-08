@@ -9,7 +9,7 @@ export function Setting() {
     .getScriptProperties()
     .getProperties();
 
-  for (const setting in Mail)
+  for (const setting of Mail)
     if (!(setting in store))
       throw ReferenceError(`Missing setting: ${setting}`);
 
@@ -29,15 +29,16 @@ export function Setting() {
   return {
     mail: Object.fromEntries(getSettingRecords(Mail)) as Record<typeof mailSetting[number][0], string>,
     calendar: Object.fromEntries(
-      getSettingRecords(Calendar).map(
-        ([category, terms]) => [
-          category,
-          terms
-            .split(";")
-            .map(term => term.trim())
-            .filter(term => term),
-        ] as const,
-      ),
+      getSettingRecords(Calendar)
+        .map(
+          ([category, terms]) => [
+            category,
+            terms
+              .split(";")
+              .map(term => term.trim())
+              .filter(term => term),
+          ] as const,
+        ),
     ) as Record<typeof calendarSetting[number][0], string[]>,
   };
 }
