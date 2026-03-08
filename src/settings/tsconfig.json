@@ -1,0 +1,7 @@
+{
+  "files": [
+    "index.ts",
+    "settings.ts",
+  ],
+  "extends": "../tsconfig-src",
+}

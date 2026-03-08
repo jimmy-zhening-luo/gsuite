@@ -1,0 +1,14 @@
+{
+  "files": [
+    "index.ts",
+  ],
+  "extends": "./tsconfig-src",
+  "references": [
+    {
+      "path": "jobs",
+    },
+    {
+      "path": "settings",
+    },
+  ],
+}

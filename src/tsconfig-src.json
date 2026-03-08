@@ -1,14 +1,14 @@
 {
-  "extends": "./tsconfig-base",
-  "include": [
-    "src/**/*",
-  ],
+  "extends": "../tsconfig-base",
   "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "../dist",
+    "composite": true,
     "noUnusedLocals": false,
     "types": [
       "google-apps-script",
     ],
-    "noEmit": true,
+    "emitDeclarationOnly": true,
     "verbatimModuleSyntax": true,
   },
 }

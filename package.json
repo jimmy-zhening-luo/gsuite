@@ -39,7 +39,7 @@
   },
   "scripts": {
     "clean": "cmd /q /c \"for %G in (types dist build packed .svelte-kit) do (if exist %G rmdir /s /q %G) & for %G in (.eslintcache) do (if exist %G del /f /q %G)\" || rm -rf types dist build packed .svelte-kit .eslintcache",
-    "build": "rollup --config",
+    "build": "tsc -b src && rollup --config",
     "lint": "eslint --cache --fix",
     "pretest": "npm run build",
     "test": "",
