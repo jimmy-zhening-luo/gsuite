@@ -1,10 +1,10 @@
-import { Setting } from "./deps/setting";
+import { Setting } from "./setting";
 import {
   Mail,
   Calendar,
 } from "./scripts";
 
-function script() {
+function run() {
   const {
     mail: {
       labelGmailGarbage,
