@@ -27,7 +27,7 @@ export function Setting() {
   }
 
   return {
-    mail: Object.fromEntries(getSettingRecords(Mail)) as Record<keyof typeof Mail, string>,
+    mail: Object.fromEntries(getSettingRecords(Mail)) as Record<typeof Mail[number], string>,
     calendar: Object.fromEntries(
       getSettingRecords(Calendar)
         .map(
@@ -39,6 +39,6 @@ export function Setting() {
               .filter(term => term),
           ] as const,
         ),
-    ) as Record<keyof typeof Calendar, string[]>,
+    ) as Record<typeof Calendar[number], string[]>,
   };
 }
