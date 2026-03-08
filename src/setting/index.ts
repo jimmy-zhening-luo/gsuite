@@ -1,7 +1,10 @@
 import { SETTINGS } from "./settings";
 
 export function Setting() {
-  const { mail, calendar } = SETTINGS,
+  const {
+    mail,
+    calendar,
+  } = SETTINGS,
   store = PropertiesService
     .getScriptProperties()
     .getProperties(),
