@@ -33,7 +33,7 @@
     "@rollup/plugin-babel": "^7.0.0",
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@types/google-apps-script": "^2.0.8",
-    "linted": "41.2.2",
+    "linted": "41.2.3",
     "rollup": "^4.60.1",
     "typescript": "^6.0.2"
   },
