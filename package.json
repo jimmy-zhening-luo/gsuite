@@ -32,8 +32,8 @@
     "@google/clasp": "^3.3.0",
     "@rollup/plugin-babel": "^7.1.0",
     "@rollup/plugin-node-resolve": "^16.0.3",
-    "@types/google-apps-script": "^2.0.9",
-    "linted": "41.11.3",
+    "@types/google-apps-script": "^2.0.11",
+    "linted": "41.11.4",
     "rollup": "^4.61.1",
     "typescript": "^6.0.3"
   },
