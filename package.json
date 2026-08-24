@@ -29,13 +29,13 @@
     "@babel/plugin-transform-runtime": "^7.29.7",
     "@babel/preset-env": "^7.29.7",
     "@babel/preset-typescript": "^7.29.7",
-    "@google/clasp": "^3.3.0",
+    "@google/clasp": "^3.4.0",
     "@rollup/plugin-babel": "^7.1.0",
     "@rollup/plugin-node-resolve": "^16.0.3",
-    "@types/google-apps-script": "^2.0.11",
+    "@types/google-apps-script": "^2.0.12",
     "@typescript/native": "npm:typescript@^7.0.2",
-    "linted": "42.0.1",
-    "rollup": "^4.62.2"
+    "linted": "42.1.0",
+    "rollup": "^4.62.5"
   },
   "scripts": {
     "clean": "cmd /q /c \"for %G in (types dist build packed .svelte-kit) do (if exist %G rmdir /s /q %G) & for %G in (.eslintcache) do (if exist %G del /f /q %G)\" || rm -rf types dist build packed .svelte-kit .eslintcache",
