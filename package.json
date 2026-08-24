@@ -3,7 +3,7 @@
   "$help": "https://docs.npmjs.com/cli/configuring-npm/package-json",
   "$schema": "https://json.schemastore.org/package",
   "name": "gsuite",
-  "version": "5.7.54",
+  "version": "5.7.55",
   "repository": "github:jimmy-zhening-luo/gsuite",
   "description": "Google Apps Script scripts for Google Apps.",
   "keywords": [
