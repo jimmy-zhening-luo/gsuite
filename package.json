@@ -34,8 +34,8 @@
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@types/google-apps-script": "^2.0.13",
     "@typescript/native": "npm:typescript@^7.0.2",
-    "linted": "42.2.0",
-    "rollup": "^4.63.4"
+    "linted": "42.3.0",
+    "rollup": "^4.64.12"
   },
   "scripts": {
     "clean": "cmd /q /c \"for %G in (types dist build packed .svelte-kit) do (if exist %G rmdir /s /q %G) & for %G in (.eslintcache) do (if exist %G del /f /q %G)\" || rm -rf types dist build packed .svelte-kit .eslintcache",
